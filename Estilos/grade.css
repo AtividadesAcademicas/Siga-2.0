@@ -4,5 +4,20 @@
     border: 0;
 }
 #body{
-    background-color: #22202d;
+    background-color: #2A2836;
+    font-size: 1.5rem;
+}
+/*Menu lateral*/
+#menu a{
+    text-decoration: none;
+    color: white;
+    margin-left: 1vw;
+}
+#menu a:hover{
+    text-decoration: none;
+    color: #FF0000;
+}
+#menu li{
+    list-style-type:none;
+    padding-top: 1vh;
 }
