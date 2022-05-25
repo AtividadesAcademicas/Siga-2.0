@@ -6,11 +6,12 @@
 #body{
     background-color: #2A2836;
     font-size: 1.5rem;
+    color: #FFF;
 }
 /*Menu lateral*/
 #menu a{
     text-decoration: none;
-    color: white;
+    color: #FFF;
     margin-left: 1vw;
 }
 #menu a:hover{
@@ -20,4 +21,27 @@
 #menu li{
     list-style-type:none;
     padding-top: 1vh;
+}
+#sair{
+    padding-bottom: 5vh;  
+}
+/*Grade de aulas*/
+#quadro{
+    width: 20vw;
+    height: 50vh;
+    border-radius: 5vw;
+    background-color: #23212E;
+}
+/*Perfil*/
+#frequencia{
+    width: 20vw;
+    height: 20vh;
+    border-radius: 3vw;
+    background-color: #23212E;
+}
+.professores{
+    color: #FFF;
+}
+.professores:hover{
+    color: #FF0000;
 }
