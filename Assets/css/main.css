@@ -1,0 +1,82 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/*===== VARIABLES CSS =====*/
+:root {
+    --red: #C02440;
+    --gray: #23212E;
+    --gray-light: #2A2836;
+    --white: #fff;
+}
+
+/*===== GLOBAL =====*/
+* {
+    padding: 0;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+}
+
+body {
+    background-color: var(--gray-light);
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*===== NAVIGATION =====*/
+header {
+    width: 15vw;
+    height: 100vh;
+}
+
+.nav {
+    display: grid;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+.nav-logo {
+    width: 175px;
+}
+
+.nav-list {
+    display: grid;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.nav-list+.nav-list {
+    align-self: flex-start;
+}
+
+.nav-item {
+    list-style-type: none;
+}
+
+.nav-link {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    width: max-content;
+}
+
+.nav-link:hover .link-text {
+    color: var(--red);
+}
+
+.link-icon {
+    width: 2.25rem;
+    fill: var(--white);
+}
+
+.link-exit {
+    fill: var(--red);
+}
+
+.link-text {
+    font-size: 1.25rem;
+}

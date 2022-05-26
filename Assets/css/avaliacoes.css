@@ -1,0 +1,52 @@
+:root {
+    --red: #C02440;
+    --gray: #23212E;
+    --gray-light: #2A2836;
+    --white: #fff;
+}
+
+.content {
+    background-color: var(--gray);
+    padding: 2.5rem 3.5rem;
+    margin: 5vh;
+    border-radius: 2.5rem;
+    display: grid;
+    height: 80vh;
+    width: 70vw;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+    font-weight: 200;
+}
+
+.calendar-info {
+    background-color: var(--gray-light);
+    padding: 1rem 0;
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    border-radius: 2.5rem;
+    justify-content: center;
+}
+
+.divisor {
+    width: 5px;
+    background-color: var(--gray);
+    height: 100px;
+}
+
+.info-course b {
+    font-weight: 600;
+}
+
+.info-test b {
+    color: var(--red);
+    font-weight: 600;
+}
+
+.info-test, .info-course {
+    line-height: 10px;
+}

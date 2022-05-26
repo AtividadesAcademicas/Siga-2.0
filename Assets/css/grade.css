@@ -1,0 +1,93 @@
+/*Variáveis*/
+:root {
+    --red: #C02440;
+    --gray: #23212E;
+    --gray-light: #2A2836;
+    --white: #fff;
+}
+/*Elementos principais*/
+*{
+    padding: 0;
+    border: 0;
+}
+body{
+    background-color: var(--gray-light);
+    font-size: 1.5rem;
+    color: var(--white);
+    display: flex;
+}
+main{
+    display: flex;
+    gap: 1.5rem;
+}
+#logo{
+    width: 8vw;
+    height: auto;
+}
+/*Menu lateral*/
+#menu {
+    padding: 0 1.5rem;
+    width: 11vw;
+    display: grid;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+#menu ul {
+    display: grid;
+    gap: 1.5rem;
+}
+.nav-link {
+    text-decoration: none;
+    color: var(--white);
+}
+.nav-link:hover {
+    color: var(--red);
+}
+#menu li{
+    list-style-type:none;
+    padding-top: 1vh;
+}
+/*Grade de aulas*/
+#grade{
+    height: 70vh;
+    border-radius: 1.5rem;
+    background-color: var(--gray);
+    display: grid;
+    padding: 2rem;
+}
+.titulo-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.horarios {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1.5rem;
+}
+table {
+    background-color: var(--gray-light);
+}
+.materia{
+    color: var(--red);
+}
+.professores{
+    color: var(--white);
+}
+.professores:hover{
+    color: var(--red);
+}
+/*Perfil*/
+#frequencia{
+    width: 20vw;
+    height: 20vh;
+    border-radius: 3vw;
+    background-color: var(--gray);
+}
+#botao-frequencia{
+    background-color: var(--red);
+    border-radius: 0.35rem;
+    color: var(--white);
+    padding: 0 0.75rem;
+}
