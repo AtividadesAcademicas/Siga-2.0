@@ -2,276 +2,281 @@
 <html lang="pt-BR">
 
   <head>
+  <!--====== META TAGS =====-->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="grade, horário, grade curricular,grade de aulas, horário de aulas, matérias, cursos, grade de matérias">
   <meta name="author" content="Pedro Berveglieri Pessina">
   <meta name="description" content="Página da grade de aulas do aluno">
-  <link rel="stylesheet" href="../Estilos/grade.css"><!--Estilos da página-->
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"><!--Ícones-->
-  <title>Grade Curricular</title> 
+  <!--===== STYLE MAIN CSS =====-->
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <!--===== STYLE CSS =====-->
+  <link rel="stylesheet" href="../assets/css/grade.css">
+  <!--===== BOOTSTRAP ICONS =====-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <!--===== TITLE =====-->
+  <title>Grade Curricular - SIGA 2.0</title>
+  <!--===== FAVICON =====-->
+  <link rel="icon" type="image/x-icon" href="../assets/image/favicon.ico">
   </head>
 
   <body>
     <header>
       <!-- menu lateral -->
-      <nav class="menulateral" id="menu">
-        <a href="#" title="Ir para a tela inicial">
-          <img id="logo" src="../Assets/Logotipo.png" alt="Logotipo Siga">
+      <nav class="nav">
+        <a href="">
+            <img src="../assets/image/logotipo.png" alt="" class="nav-logo">
         </a>
-        <a href="#" title="fazer logout" class="nav-link">
-          <i class="bx bx-power-off"></i>
-          <span class="link hide">Sair</span>
-        </a>
-        <ul>
-          <!-- itens do menu lateral -->
-          <li>
-            <a href="#" title="Ver matrícula" class="nav-link">
-              <i class="bx bx-info-circle"></i>
-              <span class="link hide"> Matrícula</span>
+
+        <div class="nav-menu" id="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="./matricula.html" class="nav-link" title="Matrícula">
+                        <i class="bi bi-info-circle link-icon"></i>
+                        <span class="link-text">Matrícula</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./frequencia.html" class="nav-link" title="Consultas">
+                        <i class="bi bi-search link-icon"></i>
+                        <span class="link-text">Consultas</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./avaliacoes.html" class="nav-link" title="Agenda">
+                        <i class="bi bi-calendar4-event link-icon"></i>
+                        <span class="link-text">Agenda</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./seguranca.html" class="nav-link" title="Segurança">
+                        <i class="bi bi-shield-check link-icon"></i>
+                        <span class="link-text">Segurança</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./solicitacoes.html" class="nav-link" title="Solicitações">
+                        <i class="bi bi-chat-square-text link-icon"></i>
+                        <span class="link-text">Solicitações</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./upload.html" class="nav-link" title="Upload de Arquivos">
+                        <i class="bi bi-file-earmark-arrow-up link-icon"></i>
+                        <span class="link-text">Upload Arquivos</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./grade.html" class="nav-link  nav-link-active" title="Plano de Ensino">
+                        <i class="bi bi-book link-icon"></i>
+                        <span class="link-text">Plano de Ensino</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./matriz.html" class="nav-link" title="Matriz Inglês">
+                        <i class="bi bi-folder2-open link-icon"></i>
+                        <span class="link-text">Matriz Inglês</span>
+                    </a>
+                </li>
+                <li class="nav-item nav-item-theme">
+                    <a href="#" class="nav-link" id="change-theme" title="Mudar Tema">
+                        <i class="bi bi-toggle-off link-icon" id="change-theme-icon"></i>
+                        <span class="link-text">Mudar Tema</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-options">
+            <a href="../index.html" class="nav-link" title="Fazer logout">
+                <i class="bi bi-x-circle-fill link-icon link-exit"></i>
+                <span class="link-text">Sair</span>
             </a>
-          </li>
-          <li>
-            <a href="#" title="Consultar informações" class="nav-link">
-              <i class="bx bx-search-alt-2"></i>
-              <span class="link hide"> Consultas</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" title="Ver agenda" class="nav-link">
-              <i class="bx bx-calendar"></i>
-              <span class="link hide"> Agenda</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" title="Opções de segurança" class="nav-link">
-              <i class="bx bx-check-shield"></i>
-              <span class="link hide"> Segurança</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" title="Ver solicitações" class="nav-link">
-              <i class="bx bx-git-pull-request"></i>
-              <span class="link hide"> Solicitações</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" title="Fazer uploar de arquivos" class="nav-link">
-              <i class="bx bx-upload"></i>
-              <span class="link hide">Upload Arquivos</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" title="Ver plano de ensino" class="nav-link">
-              <i class="bx bx-file"></i>
-              <span class="link hide"> Plano de Ensino</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" title="Ver matriz de inglês" class="nav-link">
-              <i class="bx bx-folder"></i>
-              <span class="link hide"> Matriz Inglês</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+            <i class="bi bi-list menu-burger" id="nav-toggle"></i>
+        </div>
+    </nav>
     </header>
 
     <main>
      <!--Grade curricular-->
-     <div id="grade">
+     <div class="content">
        <div class="titulo-link">
-        <h1>Grade Curricular</h1>
+        <h1 class="content-title">Grade Curricular</h1>
         <a href="#" title="Ver os professores" class="professores">Professores</a>
        </div>
        <div class="horarios">
-        <div class="tabela">
-          <h3>Segunda-feira</h3>
-          <table>
-            <tr>
-              <th class="titulo-tabela">Horário</th>
-              <th class="titulo-tabela">Matéria</th>
-              <th class="titulo-tabela">Turma</th>
-            </tr>
-            <tr>
-              <th>8:00 - 8:50</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-            <tr>
-              <th>8:50 - 9:40</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-            <tr>
-              <th>9:50 - 10:40</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-            <tr>
-              <th>10:40 - 11:30</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-          </table>
+        <div>
+          <h3 class="dia">Segunda-feira</h3>
+          <div class="quadro">
+            <ul>
+              <li><b>Horário</b></li>
+              <li>8:00 - 8:50</li>
+              <li>8:50 - 9:40</li>
+              <li>9:50 - 10:40</li>
+              <li>10:40 - 11:30</li>
+            </ul>
+            <ul>
+              <li><b>Matéria</b></li>
+              <li class="materia">IES011</li>
+              <li class="materia">IES011</li>
+              <li class="materia">IES011</li>
+              <li class="materia">IES011</li>
+            </ul>
+            <ul>
+              <li><b>Turma</b></li>
+              <li><b>A</b></li>
+              <li><b>A</b></li>
+              <li><b>A</b></li>
+              <li><b>A</b></li>
+            </ul>
+          </div>
         </div>
-        <div class="tabela">
-          <h3>Terça-feira</h3>
-          <table>
-            <tr>
-              <th class="titulo-tabela">Horário</th>
-              <th class="titulo-tabela">Matéria</th>
-              <th class="titulo-tabela">Turma</th>
-            </tr>
-            <tr>
-              <th>8:00 - 8:50</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-            <tr>
-              <th>8:50 - 9:40</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-            <tr>
-              <th>9:50 - 10:40</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-            <tr>
-              <th>10:40 - 11:30</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-          </table>
+        <div>
+          <h3 class="dia">Terça-feira</h3>
+          <div class="quadro">
+            <ul>
+              <li><b>Horário</b></li>
+              <li>8:00 - 8:50</li>
+              <li>8:50 - 9:40</li>
+              <li>9:50 - 10:40</li>
+              <li>10:40 - 11:30</li>
+            </ul>
+            <ul>
+              <li><b>Matéria</b></li>
+              <li class="materia">IES011</li>
+              <li class="materia">IES011</li>
+              <li class="materia">IES011</li>
+              <li class="materia">IES011</li>
+            </ul>
+            <ul>
+              <li><b>Turma</b></li>
+              <li><b>A</b></li>
+              <li><b>A</b></li>
+              <li><b>A</b></li>
+              <li><b>A</b></li>
+            </ul>
+          </div>
         </div>
-        <div class="tabela">
-          <h3>Quarta-feira</h3>
-          <table>
-            <tr>
-              <th class="titulo-tabela">Horário</th>
-              <th class="titulo-tabela">Matéria</th>
-              <th class="titulo-tabela">Turma</th>
-            </tr>
-            <tr>
-              <th>8:00 - 8:50</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-            <tr>
-              <th>8:50 - 9:40</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-            <tr>
-              <th>9:50 - 10:40</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-            <tr>
-              <th>10:40 - 11:30</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-          </table>
+        <div>
+          <h3 class="dia">Quarta-feira</h3>
+          <div class="quadro">
+            <ul>
+              <li><b>Horário</b></li>
+              <li>8:00 - 8:50</li>
+              <li>8:50 - 9:40</li>
+              <li>9:50 - 10:40</li>
+              <li>10:40 - 11:30</li>
+            </ul>
+            <ul >
+              <li><b>Matéria</b></li>
+              <li class="materia">IES011</li>
+              <li class="materia">IES011</li>
+              <li class="materia">IES011</li>
+              <li class="materia">IES011</li>
+            </ul>
+            <ul >
+              <li><b>Turma</b></li>
+              <li><b>A</b></li>
+              <li><b>A</b></li>
+              <li><b>A</b></li>
+              <li><b>A</b></li>
+            </ul>
+          </div>
         </div>
-        <div class="tabela">
-          <h3>Quinta-feira</h3>
-          <table>
-            <tr>
-              <th class="titulo-tabela">Horário</th>
-              <th class="titulo-tabela">Matéria</th>
-              <th class="titulo-tabela">Turma</th>
-            </tr>
-            <tr>
-              <th>8:00 - 8:50</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-            <tr>
-              <th>8:50 - 9:40</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-            <tr>
-              <th>9:50 - 10:40</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-            <tr>
-              <th>10:40 - 11:30</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-          </table>
+        <div>
+          <h3 class="dia">Quinta-feira</h3>
+          <div class="quadro">
+            <ul>
+              <li><b>Horário</b></li>
+              <li>8:00 - 8:50</li>
+              <li>8:50 - 9:40</li>
+              <li>9:50 - 10:40</li>
+              <li>10:40 - 11:30</li>
+            </ul>
+            <ul>
+              <li><b>Matéria</b></li>
+              <li class="materia">IES011</li>
+              <li class="materia">IES011</li>
+              <li class="materia">IES011</li>
+              <li class="materia">IES011</li>
+            </ul>
+            <ul>
+              <li><b>Turma</b></li>
+              <li><b>A</b></li>
+              <li><b>A</b></li>
+              <li><b>A</b></li>
+              <li><b>A</b></li>
+            </ul>
+          </div>
         </div>
-        <div class="tabela">
-          <h3>Sexta-feira</h3>
-          <table>
-            <tr>
-              <th class="titulo-tabela">Horário</th>
-              <th class="titulo-tabela">Matéria</th>
-              <th class="titulo-tabela">Turma</th>
-            </tr>
-            <tr>
-              <th>8:00 - 8:50</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-            <tr>
-              <th>8:50 - 9:40</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-            <tr>
-              <th>9:50 - 10:40</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-            <tr>
-              <th>10:40 - 11:30</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-          </table>
+        <div>
+          <h3 class="dia">Sexta-feira</h3>
+          <div class="quadro">
+            <ul>
+              <li><b>Horário</b></li>
+              <li>8:00 - 8:50</li>
+              <li>8:50 - 9:40</li>
+              <li>9:50 - 10:40</li>
+              <li>10:40 - 11:30</li>
+            </ul>
+            <ul>
+              <li><b>Matéria</b></li>
+              <li class="materia">IES011</li>
+              <li class="materia">IES011</li>
+              <li class="materia">IES011</li>
+              <li class="materia">IES011</li>
+            </ul>
+            <ul>
+              <li><b>Turma</b></li>
+              <li><b>A</b></li>
+              <li><b>A</b></li>
+              <li><b>A</b></li>
+              <li><b>A</b></li>
+            </ul>
+          </div>
         </div>
-        <div class="tabela">
-          <h3>Sábado</h3>
-          <table>
-            <tr>
-              <th class="titulo-tabela">Horário</th>
-              <th class="titulo-tabela">Matéria</th>
-              <th class="titulo-tabela">Turma</th>
-            </tr>
-            <tr>
-              <th>8:00 - 8:50</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-            <tr>
-              <th>8:50 - 9:40</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-            <tr>
-              <th>9:50 - 10:40</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-            <tr>
-              <th>10:40 - 11:30</th>
-              <th class="materia">IES011</th>
-              <th><b>A</b></th>
-            </tr>
-          </table>
+        <div>
+          <h3 class="dia">Sábado</h3>
+          <div class="quadro">
+            <ul>
+              <li><b>Horário</b></li>
+              <li>8:00 - 8:50</li>
+              <li>8:50 - 9:40</li>
+              <li>9:50 - 10:40</li>
+              <li>10:40 - 11:30</li>
+            </ul>
+            <ul>
+              <li><b>Matéria</b></li>
+              <li class="materia">IES011</li>
+              <li class="materia">IES011</li>
+              <li class="materia">IES011</li>
+              <li class="materia">IES011</li>
+            </ul>
+            <ul>
+              <li><b>Turma</b></li>
+              <li><b>A</b></li>
+              <li><b>A</b></li>
+              <li><b>A</b></li>
+              <li><b>A</b></li>
+            </ul>
+          </div>
         </div>
       </div>
        </div>
      <!--Perfil aluno-->
-     <div id="perfil">
-       <img>
-       <h2>Camila Fernandes</h2>
+     <div>
+      <div id="ferramentas">
+        <img id="foto-aluno" src="../Assets/image/Foto-perfil.jpeg" alt="Foto de perfil do aluno" title="Foto de perfil do aluno">
+        <div id="ferramentas-botoes">
+          <a href="" class="nav-link" title="Configurações">
+            <i class="bi bi-gear link-icon"></i>
+          </a>
+          <a href="" class="nav-link" title="Próximo">
+            <i class="bi bi-arrow-right-circle link-icon"></i>
+          </a>
+        </div>
+      </div>
+       <h2>Mateus Santana</h2>
        <br>
        <p>FATEC Zona Leste</p>
        <p>Desenvolvimento de Software Multiplataforma - Manhã</p>
@@ -282,10 +287,6 @@
        </div>
      </div>
     </main>
-
-    <footer>
-
-    </footer>
-
+    <script src="../assets/js/main.js"></script>
   </body>
 </html>

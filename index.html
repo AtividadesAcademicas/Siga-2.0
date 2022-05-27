@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--====== META TAGS =====-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <!--===== STYLE MAIN CSS =====-->
+    <link rel="stylesheet" href="../Assets/css/main.css">
+
+    <!--===== STYLE CSS =====-->
+    <link rel="stylesheet" href="../Assets/css/index.css">
+
+    <!--===== TITLE =====-->
+    <title>Login - SIGA 2.0</title>
+
+    <!--===== FAVICON =====-->
+    <link rel="icon" type="image/x-icon" href="../Assets/image/favicon.ico">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="singin-singup">
+                <form action="index.html" class="sign-in-form">
+                    <h2 class="title">
+                        Login - Aluno
+                    </h2>
+
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="User">
+                    </div>
+
+                    <div class="input-field">
+
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Senha">
+                    </div>
+                    <a class="form-a" href="#">Esqueceu sua senha?</a>
+                    <a href="./pages/matricula.html" value="Login" class="btn solid"></a>
+                </form>
+
+                <form action="index.html" class="sign-up-form">
+                    <h2 class="title">
+                        Login - Professor
+                    </h2>
+
+                    <div class="input-field">
+
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="User">
+                    </div>
+
+                    <div class="input-field">
+
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Senha">
+                    </div>
+                    <a class="form-a" href="#">Esqueceu sua senha?</a>
+                    <input type="submit" value="Login" class="btn solid">
+                </form>
+
+            </div>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>É um professor??</h3>
+                    <p>Está do lado errado desse form, só clicar no botão que será levado ao local correto
+                    </p>
+
+                    <button class="btn transparent" id="sign-up-btn">
+                        Login - Prof.
+                    </button>
+                </div>
+
+                <img class="image" src="../Assets/image/bg3.svg" width="300" alt="Get in the rocket">
+            </div>
+
+
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>É um aluno??</h3>
+                    <p>Está do lado errado desse form, só clicar no botão que será levado ao local correto
+                    </p>
+
+                    <button class="btn transparent" id="sign-in-btn">
+                        Login
+                    </button>
+                </div>
+
+                <img class="image" src="../Assets/image/register.svg" alt="Get in the rocket">
+            </div>
+        </div>
+    </div>
+
+    <script src="../Assets/js/index.js"></script>
+</body>
+
+</html>

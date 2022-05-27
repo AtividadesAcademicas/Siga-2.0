@@ -1,580 +1,204 @@
-/* Corpo da pagina */
-body{
-    background-color: #2A2836;
-    color: white;
-        font-weight: normal;
-    }
-    img{
-height: 250px;;
-width: 310px;
-margin-top: -80px;
-margin-left: 1px;
-max-width: 100%;
-      
-    }
-    /* Links do Menu */
-    .menulateral  a {
-    text-decoration: none;
-    color: white;
-    font-weight: normal;
-      font-size: 23px;
-      margin-left: -20px;
-      
-    }
-
-    .menulateral  a:hover {
-    text-decoration: none;
-    color: red;
-    }
-
-    
-    /* Itens do menu */
-    .menulateral  li {
-     list-style-type:none;
-      padding-top: 20px;
-    }
-
-
-    /* posição do quadro */
-    .quadro{
-    background-color: #23212E;
-    height: 740px;
-      width: 1200px;
-    margin-left: 20%;
-    margin-top: -530px;
-    
-      border-radius: 30px;
-    }
-    /* titulo frequencia */
-    .titulo{
-    color: white;
-    
-      padding-left: 10%;
-      padding-top: 40px;
-    }
-/*  Nome Materias     */
-h3{
-padding-left: 20px;
-font-size: 23px;
-    font-weight: normal;
+.content {
+  background-color: var(--brand);
+  padding: 2.5rem 3.5rem;
+  border-radius: 1rem;
+  display: grid;
+  gap: 2rem;
+  width: 70vw;
 }
-    
-    /* TUDO PORCENTAGEM  
-    */
-      /* Circulo interno     */
 
-    .porcent{
-        position: relative;
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background: #363636;
-        z-index: 1000;
-    }
+.content-title {
+  font-weight: 600;
+}
 
-  /*  Número     */
-    .porcent .number{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        border-radius: 50%;
-    }
+.calendar {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2rem;
+  font-weight: 200;
+}
+
+.calendar-info {
+  background-color: var(--brand-light);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  justify-content: center;
+  height: 5rem;
+}
+
+
+/* TUDO PORCENTAGEM  */
+
+/* Circulo interno     */
+
+.porcent {
+  position: relative;
+  margin-bottom: 0rem;
+  margin-left: 5rem;
+  border-radius: 50%;
+  background: var(--brand-dark);
+  z-index: 1000;
+
+}
+
 /*  Número     */
-    .porcent .number h2{
-        color: #ffffff;
-        font-weight: 700;
-        font-size: 40px;
-        transition: 0.5s;
-    }
-    
-    /*  Número     */
-    .porcent .number h2 span{
-        color: rgb(0,0,0);
-    }
-    
-    /*  Circulo vermelho   */
-    svg{
-        position: relative;
-        width: 150px;
-        height: 150px;
-        transform: rotate(-85deg)!important;
-            border-radius: 90%;
-
-    }
-    /*  Parte interna do circulo vermelho     */
-    svg circle{
-        width: 100%;
-        height: 100%;
-        fill: none;
-        stroke: #636363;
-        stroke-width: 35;
-        stroke-linecap: round !important;
-        transform: translate(5px, 5px);
-    }
-    
-    /*Calculo para porcentagem */
-    svg circle:nth-child(2){
-        stroke-dasharray: 440;
-        stroke-dashoffset: 440;
-    }
-    
-    .card:nth-child(1) svg circle:nth-child(2){
-        stroke-dashoffset: calc(440 - (440 * 80)/100);
-        stroke: rgb(255,0,0);
-    }
-    .card:nth-child(2) svg circle:nth-child(2){
-        stroke-dashoffset: calc(440 - (440 * 30)/100);
-        stroke: rgb(255,0,0);
-    }
-    .card:nth-child(3) svg circle:nth-child(2){
-        stroke-dashoffset: calc(440 - (440 * 60)/100);
-        stroke: rgb(255,0,0);
-    }
-    .card:nth-child(4) svg circle:nth-child(2){
-        stroke-dashoffset: calc(440 - (440 * 100)/100);
-        stroke: rgb(255,0,0);
-    }
-    .card:nth-child(5) svg circle:nth-child(2){
-        stroke-dashoffset: calc(440 - (440 * 10)/100);
-        stroke: rgb(255,0,0);
-    }
-    .card:nth-child(6) svg circle:nth-child(2){
-        stroke-dashoffset: calc(440 - (440 * 50)/100);
-        stroke: rgb(255,0,0);
-    }
-
-    /* parte interna (quadro) + materias */
-    
-    .mat1 {
-    margin-left: 50px;
-    background-color: #2A2836;
-    margin-top: 40px;
-    height: 159px;
-      width: 520px;
-      border-radius: 30px;
-        font-weight: normal;
-    }
-    /*  Siglas Materias    */
-    .texto1{
-    padding-left: 20px;
-    padding-top: 45px;
-        font-weight: bolder;
-    
-    }
-       /* parte interna (quadro) + materias */
-    #mat2 {
-    background-color: #2A2836;
-    margin-top: -574px;
-    height: 159px;
-      width: 520px;
-    margin-left: 630px;
-      border-radius: 30px;
-        font-weight: normal;
-    }
-       /* parte interna (quadro) + materias */
-    #mat3 {
-    background-color: #2A2836;
-    margin-top: 38px;
-    height: 159px;
-      width: 520px;
-    margin-left: 630px;
-      border-radius: 30px;
-       font-weight: normal;
-    }
-    
-       /* parte interna (quadro) + materias */
-    #mat4 {
-    background-color: #2A2836;
-    margin-top: 40px;
-    height: 159px;
-      width: 520px;
-    margin-left: 630px;
-        font-weight: normal;
-      border-radius: 30px;
-    }
-    
-   /* posição dos circulos */ 
-    .posi{
-    margin-top: -550px;
-    margin-left: 390px;
-      
-    }
-    .posi1{
-    margin-top: 50px;
-    margin-left: 390px;
-      
-    }
-    .posi2{
-margin-top: 45px;
-margin-left: 390px;
-    }
-.posi3{
-margin-left: 970px;
-margin-top: -545px;
-
-}
-.posi4{
-    margin-left: 970px;
-    margin-top: 48px;
-    
-    }
-    .posi5{
-        margin-left: 970px;
-        margin-top: 48px;
-        
-        }
-
-
-
-  /*  Responsividade   */
-/* RESPONSIVIDADE INCIO CELULAR? */
-@media(max-width: 510px) {   
-body{
-background-color: #2A2836;
-  
-}
-nav{
-width: 200%;
-  height: auto;
-  margin-left: 50%;
-}
-#menu{
-list-style: none;
-  margin-left: 3%;
-   justify-content: space-around; 
-  margin-top: -6rem;
-}
-#menu li{
-position: relative ;
-float: left;
+.porcent .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
 }
 
-#menu li a{
-font-family: Arial,Helvetica, sans-serif;
-  color: white;
-  text-decoration: none;
-padding-left: 1.8rem;
-  font-size: 1.9rem;
-  padding-right: 0.5rem;
-  display: block;
-    border-right: 5px solid;
-} 
-  #menu  a:hover {
- 
-    color: red;
-    }
-
-
-#quadro{
-margin-left: 8rem;
-  margin-top: 22rem;
-  height: 80rem;
-  width: 55rem;
-}
-   .titulo{
-    color: white;
-    
-      padding-left: 30%;
-      padding-top: 40px;
-    }
- /* Sigla materias */
-    .texto1{
-font-size: 1.5rem;
-      
-    }
-  /*  Nome Materias     */
-h3{
-font-size: 1.5rem;
-
-}
-  /*Inicio quadros internos */
-   .mat1 {
-    margin-left: 10rem;
-    background-color: #2A2836;
-    margin-top: 40px;
-    height: 161px;
-      width: 550px;
-      border-radius: 30px;
-    }
- #mat2 {
-    background-color: #2A2836;
-    margin-top: 0px;
-    height: 161px;
-      width: 550px;
-    margin-left: 10rem;
-      border-radius: 30px;
-
-    }
-       /* parte interna (quadro) + materias */
-    #mat3 {
-    background-color: #2A2836;
-    margin-top: 0px;
-    height: 161px;
-      width: 550px;
-    margin-left: 10rem;
-      border-radius: 30px;
-    }
-      
-    #mat4 {
-    background-color: #2A2836;
-    margin-top: 0px;
-    height: 161px;
-      width: 550px;
-    margin-left: 10rem;
-      border-radius: 30px;
-    }
-      /*FIM quadros internos */
-
-   /* INICIO posição dos circulos */ 
-    .posi{
-    margin-top: -69.5rem;
-    margin-left: 33rem;
-      
-    }
-    .posi1{
-    margin-top: 50px;
-    margin-left: 33rem;
-      
-    }
-    .posi2{
-margin-top: 50px;
-margin-left: 33rem;
-    }
-.posi3{
-margin-left: 33rem;
-margin-top: 40px;
-
-}
-.posi4{
-    margin-left: 33rem;
-    margin-top: 1.9rem;
-    
-    }
-    .posi5{
-        margin-left: 33rem;
-        margin-top: 2.3rem;
-        }
-   /* FIM posição dos circulos */
-
-  /*Imagem logo CPS */
-img{
-height: 280px;;
-width: 350px;
-margin-top: -80px;
-margin-left: 23rem;
-max-width: 100%;
-} 
-}
-/* RESPONSIVIDADE FIM CELULAR */
-  
-/* RESPONSIVIDADE Inicio TABLET */
-  @media   (min-width: 511px) and (max-width: 1200px){ 
-body{
-background-color: #2A2836;
-  
-}
-  /*  Menu lateral inicio    */  
-
- #menu  a {
-    text-decoration: none;
-    color: white;
-      font-size: 22px;
-      margin-left: -40px;
-    }
- #menu  a:hover {
-    text-decoration: none;
-    color: red;
-    }
-
- #menu li {
-     list-style-type:none;
-      padding-top: 20px;
-    }
-  /*  Menu lateral fim    */
-
-  
-    /*  Quadro principal inicio    */
-  #quadro {
-  background-color: #23212E;
-     height: 45rem;
-      width: 70rem;
-  margin-left: 12.5rem;
-    margin-top: -470px;
-    border-radius: 30px;
-    margin-bottom: 10px;
-} /*  Quadro principal fim    */
-
-  
-/* Titulo quadro */
- #titulo{
-    color: white;
-      padding-left: 10%;
-      padding-top: 40px;
-   font-size: 2rem;
-    }
-/* Fim titulo quadro */
-    
-/* Posição dos quadros internos */
- .mat1 {
-    margin-left: 30px;
-    background-color: #2A2836;
-    margin-top: 40px;
-    height: 159px;
-      width: 500px;
-      border-radius: 30px;
-    }
- #mat2 {
-    background-color: #2A2836;
-    margin-top: -579px;
-    height: 159px;
-      width: 480px;
-    margin-left: 600px;
-      border-radius: 30px;
-     flex-wrap: wrap;
-   diplay: flex;
-    }
-    
-    #mat3 {
-    background-color: #2A2836;
-    margin-top: 38px;
-    height: 159px;
-      width: 480px;
-    margin-left: 600px;
-      border-radius: 30px;
-    }
-      
-    #mat4 {
-    background-color: #2A2836;
-    margin-top: 40px;
-    height: 159px;
-      width: 480px;
-    margin-left: 600px;
-      border-radius: 30px;
-    }
-/* Fim da posição dos quadros internos */
-
-    
-   /* TUDO PORCENTAGEM   */
-      /* Circulo interno     */
-    .porcent{
-        position: relative;
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background: #363636;
-        z-index: 1000;
-    }
-
-  /*  Número     */
-    .porcent .number{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        border-radius: 50%;
-    }
 /*  Número     */
-    .porcent .number h2{
-        color: #ffffff;
-        font-weight: 700;
-        font-size: 35px;
-        transition: 0.5s;
-    }
-    
-    /*  Número     */
-    .porcent .number h2 span{
-        color: rgb(0,0,0);
-    }
-    
-    /*  Circulo vermelho   */
-    svg{
-        position: relative;
-        width: 150px;
-        height: 150px;
-        transform: rotate(-85deg)!important;
-            border-radius: 90%;
+.porcent .number span {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: 0.5s;
+}
 
-    }
-    /*  Parte interna do circulo vermelho     */
-    svg circle{
-        width: 100%;
-        height: 100%;
-        fill: none;
-        stroke: #636363;
-        stroke-width: 35;
-        stroke-linecap: round !important;
-        transform: translate(5px, 5px);
-    }
-    
-    /*Calculo para porcentagem */
-    svg circle:nth-child(2){
-        stroke-dasharray: 440;
-        stroke-dashoffset: 440;
-    }
-    
-    .card:nth-child(1) svg circle:nth-child(2){
-        stroke-dashoffset: calc(440 - (440 * 80)/100);
-        stroke: rgb(255,0,0);
-    }
-    .card:nth-child(2) svg circle:nth-child(2){
-        stroke-dashoffset: calc(440 - (440 * 30)/100);
-        stroke: rgb(255,0,0);
-    }
-    .card:nth-child(3) svg circle:nth-child(2){
-        stroke-dashoffset: calc(440 - (440 * 60)/100);
-        stroke: rgb(255,0,0);
-    }
-    .card:nth-child(4) svg circle:nth-child(2){
-        stroke-dashoffset: calc(440 - (440 * 100)/100);
-        stroke: rgb(255,0,0);
-    }
-    .card:nth-child(5) svg circle:nth-child(2){
-        stroke-dashoffset: calc(440 - (440 * 10)/100);
-        stroke: rgb(255,0,0);
-    }
-    .card:nth-child(6) svg circle:nth-child(2){
-        stroke-dashoffset: calc(440 - (440 * 50)/100);
-        stroke: rgb(255,0,0);
-    }
+/*  Circulo vermelho   */
+svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(-85deg) !important;
+  border-radius: 90%;
+  margin-left: -2.5rem;
+  margin-top: -2.4rem;
+}
 
-/* INICIO posição dos circulos */ 
-    .posi{
-    margin-top: -550px;
-    margin-left: 350px;
-      
-    }
-    .posi1{
-    margin-top: 50px;
-    margin-left: 350px;
-      
-    }
-    .posi2{
-margin-top: 45px;
-margin-left: 350px;
-    }
-.posi3{
-margin-left: 900px;
-margin-top: -545px;
+/*  Parte interna do circulo vermelho     */
+svg circle {
+  padding-left: 0px;
+  width: 40%;
+  height: 40%;
+  fill: none;
+  stroke: #636363;
+  stroke-width: 10;
+  stroke-linecap: round !important;
+  transform: translate(5px, 5px);
 
 }
-.posi4{
-    margin-left: 900px;
-    margin-top: 48px;
-    
-    }
-    .posi5{
-        margin-left: 900px;
-        margin-top: 48px;
-        }
-   /* FIM posição dos circulos */
 
-/* RESPONSIVIDADE FIM TABLET */
+/*Calculo para porcentagem */
+svg circle:nth-child(2) {
+  stroke-dasharray: 420;
+  stroke-dashoffset: 420;
+
+}
+
+.card:nth-child(1) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(800 - (900 * 200)/400);
+  stroke: var(--red);
+}
+
+.card:nth-child(2) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 30)/100);
+  stroke: var(--red);
+}
+
+.card:nth-child(3) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(4400 - (4540 * 60)/100);
+  stroke: var(--red);
+}
+
+.card:nth-child(4) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 100)/100);
+  stroke: var(--red);
+}
+
+.card:nth-child(5) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 10)/100);
+  stroke: var(--red);
+}
+
+.card:nth-child(6) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 50)/10);
+  stroke: var(--red);
+}
+
+#design {
+  margin-left: 8rem;
+}
+
+/*===== MEDIA QUERIES =====*/
+@media screen and (max-width: 1220px) {
+  .content {
+    padding: 2.5rem;
+  }
+
+  .calendar-info {
+    display: grid;
+    gap: 1rem;
+  }
+
+}
+
+@media screen and (max-width: 1150px) {
+  main {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content {
+    width: 85vw;
+    margin: 2.5rem 0;
+  }
+
+  .calendar-info {
+    display: flex;
+    gap: 2rem;
+  }
+
+
+}
+
+@media screen and (max-width: 950px) {
+  .content {
+    padding: 2.5rem;
+  }
+
+  .calendar-info {
+    display: grid;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .calendar {
+    grid-template-columns: auto;
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
+
+  .calendar-info {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 492px) {
+  .content {
+    gap: 3.5rem;
+  }
+
+  .content-title {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .calendar-info {
+    display: grid;
+  }
+}
