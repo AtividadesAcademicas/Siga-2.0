@@ -6,6 +6,7 @@
     --red: hsl(349, 68%, 45%);
     --red-dark: hsl(349, 68%, 40%);
     --brand: hsl(0, 0%, 90%);
+    --brand-dark: hsl(0, 0%, 60%);
     --brand-medium: hsl(0, 0%, 90%);
     --brand-light: hsl(0, 0%, 95%);
     --white: hsl(0, 100%, 100%);
@@ -33,8 +34,9 @@ a {
 }
 
 /*===== DARK THEME =====*/
-body.dark-theme{
+body.dark-theme {
     --brand: hsl(249, 16%, 15%);
+    --brand-dark: hsl(249, 16%, 15%);
     --brand-medium: hsl(249, 16%, 16.5%);
     --brand-light: hsl(249, 15%, 18%);
     color: var(--white);
@@ -159,6 +161,16 @@ header {
 
     .menu-burger {
         display: block;
+    }
+
+    #change-theme {
+        position: absolute;
+        right: 2.5rem;
+        top: 1rem;
+    }
+
+    #change-theme .link-text {
+        display: none;
     }
 }
 
