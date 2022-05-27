@@ -1,5 +1,5 @@
 .content {
-    background-color: var(--gray);
+    background-color: var(--brand);
     padding: 2.5rem 3.5rem;
     border-radius: 1rem;
     display: grid;
@@ -19,7 +19,7 @@
 }
 
 .calendar-info {
-    background-color: var(--gray-light);
+    background-color: var(--brand-light);
     padding: 1rem;
     display: flex;
     gap: 2.5rem;
@@ -30,7 +30,7 @@
 
 .divisor {
     width: 5px;
-    background-color: var(--gray);
+    background-color: var(--brand);
     height: 100%;
     border-radius: 0.5rem;
 }

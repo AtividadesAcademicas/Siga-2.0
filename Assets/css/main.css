@@ -5,10 +5,11 @@
 :root {
     --red: hsl(349, 68%, 45%);
     --red-dark: hsl(349, 68%, 40%);
-    --gray: hsl(249, 16%, 15%);
-    --gray-medium: hsl(249, 16%, 16.5%);
-    --gray-light: hsl(249, 15%, 18%);
+    --brand: hsl(0, 0%, 90%);
+    --brand-medium: hsl(0, 0%, 90%);
+    --brand-light: hsl(0, 0%, 95%);
     --white: hsl(0, 100%, 100%);
+    --black: hsl(0, 0%, 0%);
 }
 
 /*===== GLOBAL =====*/
@@ -16,18 +17,31 @@
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: var(--white);
     font-weight: 300;
 }
 
 body {
-    background-color: var(--gray-light);
+    background-color: var(--brand-light);
     display: flex;
     align-items: center;
+    color: var(--black);
 }
 
 a {
     text-decoration: none;
+    color: var(--black);
+}
+
+/*===== DARK THEME =====*/
+body.dark-theme{
+    --brand: hsl(249, 16%, 15%);
+    --brand-medium: hsl(249, 16%, 16.5%);
+    --brand-light: hsl(249, 15%, 18%);
+    color: var(--white);
+}
+
+body.dark-theme a {
+    color: var(--white);
 }
 
 /*===== NAVIGATION =====*/
@@ -47,7 +61,7 @@ header {
     .nav-menu {
         position: fixed;
         left: 0;
-        background-color: var(--gray-medium);
+        background-color: var(--brand-medium);
         width: 96.7vw;
         top: -100%;
         padding: 1rem;
@@ -112,6 +126,7 @@ header {
 .menu-burger {
     font-size: 2.5rem;
     display: none;
+    cursor: pointer;
 }
 
 .show-menu {
@@ -135,7 +150,7 @@ header {
         position: fixed;
         width: 94.8vw;
         height: 20vh;
-        background-color: var(--gray);
+        background-color: var(--brand);
     }
 
     .nav-logo {
