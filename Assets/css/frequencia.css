@@ -20,113 +20,41 @@
 
 .calendar-info {
   background-color: var(--brand-light);
-  padding: 0.5rem;
+  padding: 1.5rem;
   display: flex;
   align-items: center;
   border-radius: 1rem;
-  justify-content: center;
-  height: 5rem;
+  justify-content: space-between;
+}
+
+.info-course b {
+  font-weight: 600;
 }
 
 
 /* TUDO PORCENTAGEM  */
-
-/* Circulo interno     */
-
-.porcent {
+.circular-progress {
   position: relative;
-  margin-bottom: 0rem;
-  margin-left: 5rem;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  background: var(--brand-dark);
-  z-index: 1000;
-
+  display: grid;
+  place-items: center;
 }
 
-/*  Número     */
-.porcent .number {
+.circular-progress:before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 80px;
+  width: 80px;
+  background-color: var(--brand-light);
   border-radius: 50%;
 }
 
-/*  Número     */
-.porcent .number span {
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 1.5rem;
-  transition: 0.5s;
-}
-
-/*  Circulo vermelho   */
-svg {
+.value-container {
   position: relative;
-  width: 150px;
-  height: 150px;
-  transform: rotate(-85deg) !important;
-  border-radius: 90%;
-  margin-left: -2.5rem;
-  margin-top: -2.4rem;
-}
-
-/*  Parte interna do circulo vermelho     */
-svg circle {
-  padding-left: 0px;
-  width: 40%;
-  height: 40%;
-  fill: none;
-  stroke: #636363;
-  stroke-width: 10;
-  stroke-linecap: round !important;
-  transform: translate(5px, 5px);
-
-}
-
-/*Calculo para porcentagem */
-svg circle:nth-child(2) {
-  stroke-dasharray: 420;
-  stroke-dashoffset: 420;
-
-}
-
-.card:nth-child(1) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(800 - (900 * 200)/400);
-  stroke: var(--red);
-}
-
-.card:nth-child(2) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 30)/100);
-  stroke: var(--red);
-}
-
-.card:nth-child(3) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(4400 - (4540 * 60)/100);
-  stroke: var(--red);
-}
-
-.card:nth-child(4) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 100)/100);
-  stroke: var(--red);
-}
-
-.card:nth-child(5) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 10)/100);
-  stroke: var(--red);
-}
-
-.card:nth-child(6) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 50)/10);
-  stroke: var(--red);
-}
-
-#design {
-  margin-left: 8rem;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 /*===== MEDIA QUERIES =====*/
@@ -138,8 +66,10 @@ svg circle:nth-child(2) {
   .calendar-info {
     display: grid;
     gap: 1rem;
+    justify-content: center;
+    place-items: center;
+    text-align: center;
   }
-
 }
 
 @media screen and (max-width: 1150px) {
@@ -155,10 +85,9 @@ svg circle:nth-child(2) {
 
   .calendar-info {
     display: flex;
+    justify-content: space-between;
     gap: 2rem;
   }
-
-
 }
 
 @media screen and (max-width: 950px) {
@@ -168,7 +97,14 @@ svg circle:nth-child(2) {
 
   .calendar-info {
     display: grid;
+    justify-content: center;
     gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .calendar-info {
+    display: grid;
   }
 }
 
@@ -184,7 +120,10 @@ svg circle:nth-child(2) {
   .calendar-info {
     display: flex;
     gap: 2rem;
+    text-align: left;
+    justify-content: space-between;
   }
+
 }
 
 @media screen and (max-width: 492px) {
@@ -200,5 +139,7 @@ svg circle:nth-child(2) {
 @media screen and (max-width: 450px) {
   .calendar-info {
     display: grid;
+    justify-content: center;
+    text-align: center;
   }
 }

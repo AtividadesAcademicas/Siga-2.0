@@ -65,7 +65,7 @@ header {
         left: 0;
         background-color: var(--brand-medium);
         width: 96.7vw;
-        top: -100%;
+        top: -100vw;
         padding: 1rem;
         display: grid;
         justify-content: center;
@@ -141,18 +141,19 @@ header {
     }
 
     header {
-        width: 99vw;
+        width: 100vw;
         height: 20vh;
     }
 
     .nav {
         display: flex;
         justify-content: space-between;
-        padding: 0 1.75rem;
+        padding: 0 2.5%;
         position: fixed;
-        width: 94.8vw;
+        width: 95%;
         height: 20vh;
         background-color: var(--brand);
+        z-index: 999;
     }
 
     .nav-logo {
@@ -175,10 +176,6 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-    .nav {
-        padding: 0 1.25rem;
-    }
-
     .nav-logo {
         width: 125px;
     }
@@ -195,10 +192,6 @@ header {
 }
 
 @media screen and (max-width: 492px) {
-    .nav {
-        padding: 0 1rem;
-    }
-
     .nav-logo {
         width: 75px;
     }
@@ -206,4 +199,8 @@ header {
     .menu-burger {
         font-size: 1.5rem;
     }
+}
+
+main {
+    position: relative;
 }
