@@ -1,199 +1,192 @@
 <!DOCTYPE html>
-<html lang= "pt-BR">
+<html lang="pt-BR">
 
 <head>
-    <meta name= "author" content ="Guilherme Gonçalves">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Notas Parciais</title>
-  <link href="notas.css" rel="stylesheet" type="text/css" />
-    <script src="script.js"></script>
-  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-  
+    <!--====== META TAGS =====-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="grade, horário, grade curricular,grade de aulas, horário de aulas, matérias, cursos, grade de matérias">
+    <meta name="author" content="Pedro Berveglieri Pessina">
+    <meta name="description" content="Página da grade de aulas do aluno">
+
+    <!--===== STYLE MAIN CSS =====-->
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <!--===== STYLE CSS =====-->
+    <link rel="stylesheet" href="../assets/css/notas.css">
+
+    <!--===== BOOTSTRAP ICONS =====-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <!--===== TTILE =====-->
+    <title>Avaliações - SIGA 2.0</title>
+
+    <!--===== FAVICON =====-->
+    <link rel="icon" type="image/x-icon" href="../assets/image/favicon.ico">
 </head>
+
 <body>
-  
-  <header id="header">
-  
-    <img src="https://iconape.com/wp-content/files/uj/193982/png/193982.png"  alt =" Imagem logo CPS" >
-  
-    
-   <nav id="contiener">
-      <!-- menu lateral -->
-      <div class="menulateral" id="menu">
-        <ul>
-  
-          <li id="sair">
-            <a href="#" title="fazer logout">
-              <i class='bx bx-power-off'></i>
-              <span class="link hide" > Sair</span>
+    <header>
+        <nav class="nav">
+            <a href="">
+                <img src="../assets/image/logotipo.png" alt="" class="nav-logo">
             </a>
-          </li>
-  
-          <!-- itens do menu lateral -->
-        <li>
-            <a href="#" title="Ver matrícula">
-              <i class='bx bx-info-circle'></i>
-              <span class="link hide"> Matrícula</span>
-            </a>
-          </li>
-          
-          <li>
-            <a href="#" title="Consultar informações">
-              <i class='bx bx-search-alt-2'></i>
-              <span class="link hide"> Consultas</span>
-            </a>
-          </li>
-  
-          <li>
-            <a href="#"  title="Ver agenda">
-              <i class='bx bx-calendar'></i>
-              <span class="link hide"> Agenda</span>
-            </a>
-          </li>
-  
-          <li>
-            <a href="#" title="Opções de segurança">
-              <i class='bx bx-check-shield'></i>
-              <span class="link hide"> Segurança</span>
-            </a>
-          </li>
-  
-          <li>
-            <a href="#" title="Ver solicitações">
-              <i class='bx bx-git-pull-request'></i>
-              <span class="link hide"> Solicitações</span>
-            </a>
-          </li>
-  
-          <li>
-            <a href="#" title="Fazer uploar de arquivos">
-              <i class='bx bx-upload'></i>
-              <span class="link hide"> Upload Arquivos</span>
-            </a>
-          </li>
-  
-          <li>
-            <a href="#" title="Ver plano de ensino">
-              <i class='bx bx-file'></i>
-              <span class="link hide"> Plano de Ensino</span>
-            </a>
-          </li>
-  
-          <li>
-            <a href="#" title="Ver matriz de inglês">
-              <i class='bx bx-folder'></i>
-              <span class="link hide"> Matriz Inglês</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-   </nav>
-  </header>
-    
-  
-  <!-- fim dos itens menu lateral -->
 
-  
- <main class="quadro" id="quadro">
-   <h1 class="titulo" id="titulo"> Notas Parciais</h1>
-   
- <!-- Caixas da notas  -->
-<section id="notas">
-<div class="caixa" id="caixa">
-  <h3 class="texto"> Sigla: IES011 </h3>
- <h4> Engenharia de <Br> Software 1</h4>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="" class="nav-link" title="Matrícula">
+                            <i class="bi bi-info-circle link-icon"></i>
+                            <span class="link-text">Matrícula</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link nav-link-active" title="Consultas">
+                            <i class="bi bi-search link-icon"></i>
+                            <span class="link-text">Consultas</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./avaliacoes.html" class="nav-link" title="Agenda">
+                            <i class="bi bi-calendar4-event link-icon"></i>
+                            <span class="link-text">Agenda</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link" title="Segurança">
+                            <i class="bi bi-shield-check link-icon"></i>
+                            <span class="link-text">Segurança</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link" title="Solicitações">
+                            <i class="bi bi-chat-square-text link-icon"></i>
+                            <span class="link-text">Solicitações</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link" title="Upload de Arquivos">
+                            <i class="bi bi-file-earmark-arrow-up link-icon"></i>
+                            <span class="link-text">Upload Arquivos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link" title="Plano de Ensino">
+                            <i class="bi bi-book link-icon"></i>
+                            <span class="link-text">Plano de Ensino</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link" title="Plano de Ensino">
+                            <i class="bi bi-folder2-open link-icon"></i>
+                            <span class="link-text">Matriz Inglês</span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-item-theme">
+                        <a href="#" class="nav-link" id="change-theme" title="Mudar Tema">
+                            <i class="bi bi-toggle-off link-icon" id="change-theme-icon"></i>
+                            <span class="link-text">Mudar Tema</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-options">
+                <a href="../index.html" class="nav-link" title="Plano de Ensino">
+                    <i class="bi bi-x-circle-fill link-icon link-exit"></i>
+                    <span class="link-text">Sair</span>
+                </a>
+                <i class="bi bi-list menu-burger" id="nav-toggle"></i>
+            </div>
+        </nav>
+    </header>
 
-<div class="linha-vertical" id="verticalen"></div>
-     <div class="nts" id ="ntseg">
-   <h5> <font color="red"> P1 </font> - 5.5 
-       <br> <font color="red"> P2 </font>- 10 
-       <br> <font color="red">  P3 </font> - 9.3 
-       </h5>
-     </div>
-  
-</div>
+    <main>
+        <div class="content">
+            <h1 class="content-title">Notas Parciais</h1>
+            <div class="calendar">
+                <div class="calendar-info">
+                    <div class="info-course">
+                        <p><b>Sigla:</b> IES011</p>
+                        <p>Engenharia de Software</p>
+                    </div>
+                    <div class="divisor"></div>
+                    <div class="info-test">
+                        <p><b>P1</b> - 2.5</p>
+                        <p><b>P2</b> - 9.7</p>
+                        <p><b>P3</b> - 10</p>
+                    </div>
+                </div>
 
-  
-    <div  class="caixa" id="caixa1">
-      <h3 class="texto"> Sigla: IAL010 </h3> 
-      <h4> Algoritmo e Lógica<br> de Programação </h4>
-      
-       <div class="linha-vertical" id="verticalal"></div>
-    <div class="nts" id="ntsal">
-  <h5> <font color="red"> P1 </font> - 5.5 
-       <br> <font color="red"> P2 </font>- 10 
-       <br> <font color="red">  P3 </font> - 9.3 
-       </h5>
-   </div>  
-    </div>
+                <div class="calendar-info">
+                    <div class="info-course">
+                        <p><b>Sigla:</b> IBD014</p>
+                        <p>Modelagem de Banco de Dados</p>
+                    </div>
+                    <div class="divisor"></div>
+                    <div class="info-test">
+                        <p><b>P1</b> - 7.8</p>
+                        <p><b>P2</b> - 9.9</p>
+                        <p><b>P3</b> - 9.4</p>
+                    </div>
+                </div>
 
-  
-   <div class="caixa" id="caixa2">
-      <h3 class="texto"> Sigla: ISW028 </h3>
-    <h4> Desenvolvimento <bR> Web 1 </h4>
+                <div class="calendar-info">
+                    <div class="info-course">
+                        <p><b>Sigla:</b> IAL010</p>
+                        <p>Algoritmo e Lógica de Programação</p>
+                    </div>
+                    <div class="divisor"></div>
+                    <div class="info-test">
+                        <p><b>P1</b> - 7.6</p>
+                        <p><b>P2</b> - 5.5</p>
+                        <p><b>P3</b> - 8.0</p>
+                    </div>
+                </div>
 
-   <div class="linha-vertical" id="verticaldw"></div>
-    <div class="nts" id="ntsdw">
-   <h5> <font color="red"> P1 </font> - 5.5
-      <br> <font color="red"> P2 </font>- 10 
-     <br> <font color="red">  P3 </font> - 9.3
-       </h5>
-   </div>
+                <div class="calendar-info">
+                    <div class="info-course">
+                        <p><b>Sigla:</b> ISO011</p>
+                        <p>S.O e Redes de Computadores</p>
+                    </div>
+                    <div class="divisor"></div>
+                    <div class="info-test">
+                        <p><b>P1</b> - 10</p>
+                        <p><b>P2</b> - 10</p>
+                        <p><b>P3</b> - 9.9</p>
+                    </div>
+                </div>
 
-    </div>
+                <div class="calendar-info">
+                    <div class="info-course">
+                        <p><b>Sigla:</b> ISW028</p>
+                        <p>Desenvolvimento Web I</p>
+                    </div>
+                    <div class="divisor"></div>
+                    <div class="info-test">
+                        <p><b>P1</b> - 9.9</p>
+                        <p><b>P2</b> - 9.5</p>
+                        <p><b>P3</b> - 9.0</p>
+                    </div>
+                </div>
 
-  
-<div class="caixa" id="caixa3">
-      <h3 class="texto"> Sigla: IBD014 </h3>
-       <h4> Modelagem de <br>Banco de Dados </h4>
+                <div class="calendar-info">
+                    <div class="info-course">
+                        <p><b>Sigla:</b> ISW031</p>
+                        <p>Design Digital</p>
+                    </div>
+                    <div class="divisor"></div>
+                    <div class="info-test">
+                        <p><b>P1</b> - 9.2</p>
+                        <p><b>P2</b> - 10 </p>
+                        <p><b>P3</b> - 6.8</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-<div class="linha-vertical" id="verticalbd"></div>
-    <div class="nts" id="ntsbd">
-   <h5> <font color="red"> P1 </font> - 5.5
-       <br> <font color="red"> P2 </font>- 10 
-       <br> <font color="red">  P3 </font> - 9.3 
-       </h5>
-    </div>
-
-</div>
-
-
-  
- <div class="caixa" id="caixa4">
-      <h3 class="texto"> Sigla: ISO011 </h3>
-      <h4> Sistemas Operacionais e  
-  <br> Redes de Computadores </h4>
-
-<div class="linha-vertical" id="verticalso"></div>
-  <div class="nts" id="ntsso">
-   <h5> <font color="red"> P1 </font> - 5.5 
-       <br> <font color="red"> P2 </font>- 10 
-       <br> <font color="red">  P3 </font> - 9.3 
-       </h5>
-  </div>
-
- </div>
-
-
-  
- <div class="caixa" id="caixa5">
-      <h3 class="texto"> Sigla: ISW031 </h3>
-        <h4> Design <br> Digital </h4>
-
-   
-<div class="linha-vertical" id="verticaldd"></div>
-    <div class="nts" id="ntsdd">
-  <h5> <font color="red"> P1 </font> - 5.5 
-       <br> <font color="red"> P2 </font>- 10 
-       <br> <font color="red">  P3 </font> - 9.3 
-       </h5>
-    </div>
-   
-   </div>
-    </section>
-      </main>
-
-
+    <script src="../assets/js/main.js"></script>
 </body>
+
 </html>
