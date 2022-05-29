@@ -36,29 +36,16 @@ themeButton.addEventListener('click', () => {
     iconTheme.classList.toggle(changeIcon)
 })
 
-/*=============== PROGRESS BAR ===============*/
-var i = 1;
-while (i <= 6) {
-    let progressBar = document.querySelector(`.circular-progress-${i}`)
-    let valueContainer = document.querySelector(`.value-container-${i}`)
+/*=============== MODAL ===============*/
+const modalViews = document.querySelector('#modal'),
+    modalBtns = document.querySelector('#open-modal'),
+    modalCloses = document.querySelector('#close-modal')
 
-    let progressValue = 0;
-    let progressEndValue = valueContainer.textContent;
-    let speed = 10;
 
-    let progress = setInterval(() => {
-        progressValue++
+modalBtns.addEventListener('click', () => {
+    modalViews.classList.add('active-modal')
+})
 
-        valueContainer.textContent = `${progressValue}%`
-        progressBar.style.background = `conic-gradient(
-        var(--red) ${progressValue * 3.6}deg,
-        var(--brand) ${progressValue * 3.6}deg
-    )`
-
-        if (progressValue == progressEndValue) {
-            clearInterval(progress)
-        }
-    }, speed)
-
-    i++
-}
+modalCloses.addEventListener('click', () => {
+    modalViews.classList.remove('active-modal')
+})

@@ -1,7 +1,8 @@
-main{
+main {
     display: flex;
     gap: 2rem;
 }
+
 /*Grade de aulas*/
 .content {
     background-color: var(--brand);
@@ -10,20 +11,24 @@ main{
     display: grid;
     gap: 2rem;
 }
+
 .content-title {
     font-weight: 600;
 }
-.titulo-link{
+
+.titulo-link {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .horarios {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 1.5rem;
 }
-.quadro{
+
+.quadro {
     display: grid;
     grid-template-columns: max-content auto auto;
     gap: 1rem;
@@ -32,25 +37,31 @@ main{
     text-align: center;
     border-radius: 1rem;
 }
-li{
+
+li {
     list-style-type: none;
 }
-.dia{
+
+.dia {
     margin-bottom: 1rem;
     font-weight: 450;
 }
-.materia{
+
+.materia {
     color: var(--red);
 }
-.professores{
+
+.professores {
     text-decoration: underline;
 }
-.professores:hover{
+
+.professores:hover {
     color: var(--red);
     text-decoration: underline;
 }
+
 /*Perfil*/
-#frequencia{
+#frequencia {
     width: 20vw;
     height: 20vh;
     border-radius: 3vw;
@@ -59,7 +70,8 @@ li{
     padding: 2rem 4rem;
     margin-top: 5rem;
 }
-#botao-frequencia{
+
+#botao-frequencia {
     background-color: var(--red);
     border-radius: 0.35rem;
     color: var(--white);
@@ -67,19 +79,7 @@ li{
     margin-left: 50%;
     height: max-content;
 }
-.bi{
+
+.bi {
     font-size: 2rem;
-}
-#ferramentas{
-    display: flex;
-    justify-content: space-between;
-}
-#ferramentas-botoes{
-    display: flex;
-    gap: 1.5rem;
-}
-#foto-aluno{
-    border-radius: 3rem;
-    width: 6rem;
-    height: 6rem;
 }

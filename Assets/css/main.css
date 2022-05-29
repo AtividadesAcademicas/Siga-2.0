@@ -6,7 +6,6 @@
     --red: hsl(349, 68%, 45%);
     --red-dark: hsl(349, 68%, 40%);
     --brand: hsl(0, 0%, 90%);
-    --brand-dark: hsl(0, 0%, 60%);
     --brand-medium: hsl(0, 0%, 90%);
     --brand-light: hsl(0, 0%, 95%);
     --white: hsl(0, 100%, 100%);
@@ -36,7 +35,6 @@ a {
 /*===== DARK THEME =====*/
 body.dark-theme {
     --brand: hsl(249, 16%, 15%);
-    --brand-dark: hsl(249, 16%, 15%);
     --brand-medium: hsl(249, 16%, 16.5%);
     --brand-light: hsl(249, 15%, 18%);
     color: var(--white);
@@ -49,7 +47,7 @@ body.dark-theme a {
 /*===== NAVIGATION =====*/
 header {
     width: 20vw;
-    height: 97.5vh;
+    height: 100vh;
 }
 
 .nav {
@@ -64,13 +62,13 @@ header {
         position: fixed;
         left: 0;
         background-color: var(--brand-medium);
-        width: 96.7vw;
-        top: -100vw;
-        padding: 1rem;
+        width: 100vw;
+        top: -200vw;
         display: grid;
         justify-content: center;
         transition: 0.3s;
         border-radius: 0 0 2.5rem 2.5rem;
+        padding-top: 1rem;
     }
 }
 
@@ -132,7 +130,7 @@ header {
 }
 
 .show-menu {
-    top: 20vh;
+    top: 10rem;
 }
 
 @media screen and (max-width: 1150px) {
@@ -142,7 +140,7 @@ header {
 
     header {
         width: 100vw;
-        height: 20vh;
+        height: 10rem;
     }
 
     .nav {
@@ -151,7 +149,7 @@ header {
         padding: 0 2.5%;
         position: fixed;
         width: 95%;
-        height: 20vh;
+        height: 10rem;
         background-color: var(--brand);
         z-index: 999;
     }
@@ -159,6 +157,7 @@ header {
     .nav-logo {
         width: 150px;
     }
+
 
     .menu-burger {
         display: block;
@@ -178,6 +177,14 @@ header {
 @media screen and (max-width: 768px) {
     .nav-logo {
         width: 125px;
+    }
+
+    .link-icon {
+        font-size: 1.5rem;
+    }
+
+    .link-text {
+        font-size: 1rem;
     }
 }
 
@@ -203,4 +210,16 @@ header {
 
 main {
     position: relative;
+}
+
+.content-title {
+    font-weight: 600;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.content-title-icon {
+    font-size: 2rem;
+    color: var(--red);
 }

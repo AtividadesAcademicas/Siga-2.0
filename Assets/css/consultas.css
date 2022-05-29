@@ -1,0 +1,240 @@
+main {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.content {
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile {
+    display: grid;
+    gap: 1.5rem;
+    width: max-content;
+    background-color: var(--brand);
+    padding: 5%;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.profile-options {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+.profile-img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.profile-buttons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.profile-info {
+    display: grid;
+    gap: 1rem;
+}
+
+.profile-info h2 {
+    font-weight: 600;
+}
+
+.info-course {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.info-course-title {
+    font-weight: 500;
+}
+
+.options {
+    display: grid;
+    gap: 2rem;
+    background-color: var(--brand);
+    border-radius: 1rem;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.options-container {
+    display: grid;
+    text-align: center;
+}
+
+.options-title {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.options-icon {
+    font-size: 25px;
+}
+
+.options-link {
+    font-size: 17px;
+}
+
+.options-link:hover {
+    color: var(--red);
+    font-weight: 400;
+    transition: 0.1s;
+}
+
+.important-announcement {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.important-announcement {
+    color: var(--red);
+}
+
+.important-announcement span+span {
+    margin-left: 1.5rem;
+}
+
+.important-announcement b {
+    font-weight: 500;
+}
+
+/*===== MODAL =====*/
+.modal {
+    position: absolute;
+    background-color: var(--brand);
+    border-radius: 1rem;
+    width: 90%;
+    height: 85%;
+    display: grid;
+    align-items: center;
+    padding: 5%;
+    visibility: hidden;
+}
+
+.active-modal {
+    visibility: visible;
+}
+
+.modal .active-modal {
+    visibility: hidden;
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+.modal-content {
+    display: grid;
+    gap: 1rem;
+}
+
+.modal-content div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.modal-content-icon {
+    font-size: 25px;
+    color: var(--red);
+}
+
+.modal-content-text b {
+    font-weight: 400;
+    color: var(--red);
+}
+
+.modal-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-button a {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    outline: none;
+    background-color: var(--red);
+    color: #fff;
+
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.modal-button button:hover {
+    background-color: var(--red-dark);
+}
+
+@media screen and (max-width: 1150px) {
+    main {
+        justify-content: center;
+        padding: 2.5rem 0;
+    }
+
+    .content {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    main {
+        gap: 3rem;
+    }
+
+    .content {
+        display: grid;
+        justify-content: center;
+        place-items: center;
+        gap: 1.5rem;
+        width: 100vw;
+    }
+
+    .profile,
+    .options {
+        width: 100%;
+    }
+
+    .profile-options {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .options {
+        padding: 5%;
+    }
+
+    .important-announcement {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .important-announcement {
+        padding: 0 1.5rem;
+    }
+}
+
+@media screen and (max-width: 535px) {
+
+    .profile,
+    .options {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .profile,
+    .options {
+        width: 75%;
+    }
+}
