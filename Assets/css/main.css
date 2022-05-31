@@ -7,6 +7,7 @@
     --red-dark: hsl(349, 68%, 40%);
     --brand: hsl(0, 0%, 90%);
     --brand-medium: hsl(0, 0%, 90%);
+    --brand-dark: hsl(0, 0%, 80%);
     --brand-light: hsl(0, 0%, 95%);
     --white: hsl(0, 100%, 100%);
     --black: hsl(0, 0%, 0%);
@@ -36,6 +37,7 @@ a {
 body.dark-theme {
     --brand: hsl(249, 16%, 15%);
     --brand-medium: hsl(249, 16%, 16.5%);
+    --brand-dark: hsl(249, 16%, 12%);
     --brand-light: hsl(249, 15%, 18%);
     color: var(--white);
 }
@@ -131,6 +133,58 @@ header {
 
 .show-menu {
     top: 10rem;
+}
+
+.checkbox {
+    width: 2rem;
+    height: 1.25rem;
+    padding: 0.20rem;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 1rem;
+    border: solid 2px var(--black);
+    cursor: pointer;
+}
+
+.checkbox::before {
+    content: "";
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    transition: transform 200ms;
+    background-color: var(--black);
+}
+
+.checkbox.on {
+    border: 2px solid var(--white);
+    padding: 0;
+}
+
+.checkbox.on::before {
+    background-color: var(--white);
+    border: none;
+    width: 1rem;
+    height: 1rem;
+    transform: translateX(0.75rem);
+}
+
+#change-theme:hover .checkbox {
+    border: 2px solid var(--red);
+}
+
+#change-theme:hover .checkbox::before {
+    background-color: var(--red);
+}
+
+#change-theme:hover .checkbox.on {
+    border: 2px solid var(--red);
+}
+
+#change-theme:hover .checkbox.on::before {
+    background-color: var(--red);
+    border: none;
 }
 
 @media screen and (max-width: 1150px) {

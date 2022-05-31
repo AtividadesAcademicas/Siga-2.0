@@ -16,9 +16,9 @@ showMenu('nav-toggle', 'nav-menu')
 
 /*=============== DARK THEME ===============*/
 const themeButton = document.getElementById('change-theme')
-const iconTheme = document.getElementById('change-theme-icon')
 const darkTheme = 'dark-theme'
 const changeIcon = 'bi-toggle-on'
+const switchButton = document.getElementById('checkbox');
 
 //Obtemos o tema atual que a interface tem validando a classe 'dark-theme'
 const getCurrentTheme = () =>
@@ -32,20 +32,11 @@ themeButton.addEventListener('click', () => {
     //Adiciona ou remove a classe 'dark-theme' ao body
     document.body.classList.toggle('dark-theme')
 
-    //Adiciona ou remove a classe 'bi-toggle-on' ao ícone
-    iconTheme.classList.toggle(changeIcon)
-})
+    //Switch
+    if (checkbox.classList.contains('on'))
+        checkbox.setAttribute('aria-checked', 'false');
+    else
+        checkbox.setAttribute('aria-checked', 'true');
 
-/*=============== MODAL ===============*/
-const modalViews = document.querySelector('#modal'),
-    modalBtns = document.querySelector('#open-modal'),
-    modalCloses = document.querySelector('#close-modal')
-
-
-modalBtns.addEventListener('click', () => {
-    modalViews.classList.add('active-modal')
-})
-
-modalCloses.addEventListener('click', () => {
-    modalViews.classList.remove('active-modal')
+    checkbox.classList.toggle('on');
 })

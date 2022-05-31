@@ -4,7 +4,7 @@ main {
 }
 
 .content {
-    width: 70vw;
+    width: 75vw;
     display: flex;
     justify-content: space-between;
 }
@@ -90,23 +90,6 @@ main {
     transition: 0.1s;
 }
 
-.important-announcement {
-    display: grid;
-    gap: 0.5rem;
-}
-
-.important-announcement {
-    color: var(--red);
-}
-
-.important-announcement span+span {
-    margin-left: 1.5rem;
-}
-
-.important-announcement b {
-    font-weight: 500;
-}
-
 /*===== MODAL =====*/
 .modal {
     position: absolute;
@@ -172,6 +155,20 @@ main {
 
 .modal-button button:hover {
     background-color: var(--red-dark);
+}
+
+.important-announcement {
+    display: grid;
+    gap: 0.5rem;
+    color: var(--red);
+}
+
+.important-announcement span+span {
+    margin-left: 1.5rem;
+}
+
+.important-announcement b {
+    font-weight: 500;
 }
 
 @media screen and (max-width: 1150px) {

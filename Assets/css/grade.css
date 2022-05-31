@@ -1,6 +1,6 @@
 main {
-    display: flex;
-    gap: 2rem;
+    display: grid;
+    justify-content: center;
 }
 
 /*Grade de aulas*/
@@ -10,6 +10,7 @@ main {
     border-radius: 1rem;
     display: grid;
     gap: 2rem;
+    width: 70vw;
 }
 
 .content-title {
@@ -25,15 +26,25 @@ main {
 .horarios {
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: 1.5rem;
+    gap: 2rem;
+}
+
+.horarios div {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.dia {
+    font-weight: 500;
+    text-align: center
 }
 
 .quadro {
     display: grid;
-    grid-template-columns: max-content auto auto;
+    grid-template-columns: auto auto auto;
     gap: 1rem;
     background-color: var(--brand-light);
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     text-align: center;
     border-radius: 1rem;
 }
@@ -42,17 +53,13 @@ li {
     list-style-type: none;
 }
 
-.dia {
-    margin-bottom: 1rem;
-    font-weight: 450;
-}
-
 .materia {
     color: var(--red);
 }
 
 .professores {
     text-decoration: underline;
+    width: max-content;
 }
 
 .professores:hover {
@@ -60,26 +67,62 @@ li {
     text-decoration: underline;
 }
 
-/*Perfil*/
-#frequencia {
-    width: 20vw;
-    height: 20vh;
-    border-radius: 3vw;
-    background-color: var(--brand);
-    display: flex;
-    padding: 2rem 4rem;
-    margin-top: 5rem;
+@media screen and (max-width: 1150px) {
+    .content {
+        margin: 2.5rem 0;
+        width: 85vw;
+    }
 }
 
-#botao-frequencia {
-    background-color: var(--red);
-    border-radius: 0.35rem;
-    color: var(--white);
-    padding: 0 0.75rem;
-    margin-left: 50%;
-    height: max-content;
+@media screen and (max-width: 946px) {
+    .horarios {
+        grid-template-columns: auto auto;
+    }
 }
 
-.bi {
-    font-size: 2rem;
+@media screen and (max-width: 675px) {
+    .content {
+        padding: 2rem;
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 657px) {
+    .horarios {
+        grid-template-columns: auto;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .content {
+        gap: 3.5rem;
+    }
+
+    .titulo-link {
+        display: grid;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .professores {
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .content {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .link-icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .content-title {
+        text-align: center;
+    }
 }

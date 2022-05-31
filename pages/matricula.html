@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../assets/css/main.css">
 
     <!--===== STYLE CSS =====-->
-    <link rel="stylesheet" href="../assets/css/avaliacoes.css">
+    <link rel="stylesheet" href="../assets/css/matricula.css">
 
     <!--===== BOOTSTRAP ICONS =====-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
@@ -29,7 +29,7 @@
 <body>
     <header>
         <nav class="nav">
-            <a href="">
+            <a href="#">
                 <img src="../assets/image/logotipo.png" alt="Logotipo SIGA 2.0" class="nav-logo">
             </a>
 
@@ -85,7 +85,8 @@
                     </li>
                     <li class="nav-item nav-item-theme">
                         <a href="#" class="nav-link" id="change-theme" title="Mudar Tema">
-                            <i class="bi bi-toggle-off link-icon" id="change-theme-icon"></i>
+                            <button class="checkbox" role="switch" aria-checked="false" id="checkbox">
+                            </button>
                             <span class="link-text">Mudar Tema</span>
                         </a>
                     </li>
@@ -101,10 +102,51 @@
         </nav>
     </header>
     <main>
-
+        <div class="content">
+            <div class="content-info">
+                <h1 class="content-title">
+                    Matrícula do Aluno
+                </h1>
+                <div class="content-user">
+                    <img src="../assets/image/Foto-perfil.jpeg" alt="Foto de Perfil do Aluno" class="user-img">
+                    <div class="info-user">
+                        <p class="info-user-text"><b>RA:</b> 1111234567890</p>
+                        <p class="info-user-text"><b>Nome:</b> Gustavo Nascimento Souza</p>
+                    </div>
+                    <div class="info-user">
+                        <p class="info-user-text"><b>Habilitação:</b> Tecnólogo em Desenvolvimento de Software
+                            Multiplataforma</p>
+                        <p class="info-user-text"><b>Situação:</b> Em curso</p>
+                    </div>
+                    <div class="info-user">
+                        <p class="info-user-text"><b>Período:</b> Manhã</p>
+                        <p class="info-user-text"><b>Semestre Ingresso:</b> 1º Semestre - 2022</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-office">
+                <div class="office-title">
+                    <h2 class="office-title-text">Office 365</h2>
+                </div>
+                <div class="office-text">
+                    <span>
+                        <b>Email Institucional:</b>
+                        <a href="#" class="office-link">gustavo.souza113@fatec.sp.gov.br</a>
+                    </span>
+                    <span>
+                        <b>Termos de uso:</b>
+                        <a href="#" class="office-link">Clique aqui</a>
+                    </span>
+                </div>
+                <div class="office-footer">
+                    <p class="office-title-text">Outros benefícios:</p>
+                    <a href="#" class="office-link">Clique aqui</a>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <script src="../Assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

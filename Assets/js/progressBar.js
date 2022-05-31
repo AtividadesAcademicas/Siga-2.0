@@ -5,7 +5,7 @@ while (i <= 6) {
     let valueContainer = document.querySelector(`.value-container-${i}`)
 
     let progressValue = 0;
-    let progressEndValue = valueContainer.textContent;
+    let progressEndValue = parseInt(valueContainer.textContent);
     let speed = 10;
 
     let progress = setInterval(() => {
@@ -13,9 +13,13 @@ while (i <= 6) {
 
         valueContainer.textContent = `${progressValue}%`
         progressBar.style.background = `conic-gradient(
-        var(--red) ${progressValue * 3.6}deg,
-        var(--brand) ${progressValue * 3.6}deg
-    )`
+            var(--red) ${progressValue * 3.6}deg,
+            var(--brand) ${progressValue * 3.6}deg
+        )`
+
+        if (progressEndValue < 75) {
+            valueContainer.style.color = `var(--red)`
+        }
 
         if (progressValue == progressEndValue) {
             clearInterval(progress)

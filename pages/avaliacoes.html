@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords"
         content="grade, horário, grade curricular,grade de aulas, horário de aulas, matérias, cursos, grade de matérias">
-    <meta name="author" content="Pedro Berveglieri Pessina">
+    <meta name="author" content="Pedro Berveglieri Pessina, Gustavo Nascimento Souza, Guilherme Gonçalves">
     <meta name="description" content="Página da grade de aulas do aluno">
 
     <!--===== STYLE MAIN CSS =====-->
@@ -29,7 +29,7 @@
 <body>
     <header>
         <nav class="nav">
-            <a href="">
+            <a href="#">
                 <img src="../assets/image/logotipo.png" alt="" class="nav-logo">
             </a>
 
@@ -85,7 +85,8 @@
                     </li>
                     <li class="nav-item nav-item-theme">
                         <a href="#" class="nav-link" id="change-theme" title="Mudar Tema">
-                            <i class="bi bi-toggle-off link-icon" id="change-theme-icon"></i>
+                            <button class="checkbox" role="switch" aria-checked="false" id="checkbox">
+                            </button>
                             <span class="link-text">Mudar Tema</span>
                         </a>
                     </li>
@@ -103,7 +104,10 @@
 
     <main>
         <div class="content">
-            <h1 class="content-title">Calendário de Avaliações</h1>
+            <h1 class="content-title">
+                <i class="bi bi-calendar-plus link-icon"></i>
+                Calendário de Avaliações
+            </h1>
             <div class="calendar">
                 <div class="calendar-info">
                     <div class="info-course">

@@ -3,13 +3,14 @@
     padding: 2.5rem 3.5rem;
     border-radius: 1rem;
     display: grid;
-    width: 70vw;
     gap: 2rem;
+    width: 70vw;
 }
 
+/* Retangulos internos */
 .calendar {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
     gap: 2rem;
     font-weight: 200;
 }
@@ -18,33 +19,35 @@
     background-color: var(--brand-light);
     padding: 1rem;
     display: flex;
-    gap: 2.5rem;
+    gap: 1rem;
     align-items: center;
     border-radius: 1rem;
     justify-content: space-between;
 }
 
-.divisor {
-    width: 5px;
-    background-color: var(--brand);
-    height: 100%;
-    border-radius: 0.5rem;
-    display: none;
-}
-
+/* Conteudo Textual interno */
 .info-course b {
     font-weight: 600;
 }
 
-.info-test b {
-    color: var(--red);
-    font-weight: 600;
+.info-test {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    column-gap: 3rem;
 }
 
-.info-test,
-.info-course {
-    line-height: 30px;
+/* Texto SOLICITAR */
+.submit-link {
+    color: red;
+    align-self: flex-end;
 }
+
+body.dark-theme .submit-link {
+    color: var(--red)
+}
+
 
 /*===== MEDIA QUERIES =====*/
 @media screen and (max-width: 1220px) {
@@ -54,16 +57,14 @@
 
     .calendar-info {
         display: grid;
-        gap: 1rem;
+        gap: 2rem;
         justify-content: center;
         place-items: center;
         text-align: center;
     }
 
-    .divisor {
-        width: 100%;
-        height: 5px;
-        display: block;
+    .info-test {
+        gap: 0.25rem;
     }
 }
 
@@ -74,70 +75,29 @@
     }
 
     .content {
-        width: 90vw;
+        width: 85vw;
         margin: 2.5rem 0;
     }
 
     .calendar-info {
         display: flex;
         justify-content: space-between;
-        gap: 1rem;
         text-align: left;
-    }
-
-    .divisor {
-        width: 5px;
-        height: 100%;
-        display: none;
     }
 }
 
 @media screen and (max-width: 950px) {
-    .content {
-        padding: 2.5rem;
-        width: 85vw;
-    }
-
     .calendar-info {
         display: grid;
         justify-content: center;
         text-align: center;
     }
-
-    .divisor {
-        width: 100%;
-        height: 5px;
-        display: block;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .calendar-info {
-        display: grid;
-    }
 }
 
 @media screen and (max-width: 600px) {
-    .calendar {
-        grid-template-columns: auto;
-    }
-
     .content {
         padding: 1.5rem;
     }
-
-    .calendar-info {
-        display: flex;
-        text-align: left;
-        justify-content: space-between;
-    }
-
-    .divisor {
-        width: 5px;
-        height: 100%;
-        display: none;
-    }
-
 }
 
 @media screen and (max-width: 492px) {
@@ -150,16 +110,17 @@
     .content-title {
         text-align: center;
     }
-
-    .divisor {
-        width: 100%;
-        height: 5px;
-        display: block;
-    }
 }
 
 @media screen and (max-width: 375px) {
     .content {
         padding: 2rem 1rem;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .info-test {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
     }
 }

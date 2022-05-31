@@ -2,12 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <!--====== META TAGS =====-->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./Assets/css/index.css">
-    <title>Responsive Form</title>
+    <meta name="keywords"
+        content="grade, horário, grade curricular,grade de aulas, horário de aulas, matérias, cursos, grade de matérias">
+    <meta name="author" content="Pedro Berveglieri Pessina, Gustavo Nascimento Souza, Guilherme Gonçalves">
+    <meta name="description" content="Página da grade de aulas do aluno">
+
+    <!--===== STYLE CSS =====-->
+    <link rel="stylesheet" href="./assets/css/index.css">
+
+    <!--===== TTILE =====-->
+    <title>Login - SIGA 2.0</title>
+
+    <!--===== FAVICON =====-->
+    <link rel="icon" type="image/x-icon" href="./assets/image/favicon.ico">
+
+    <!--===== FONT AWEASOME =====-->
+    <script src="https://kit.fontawesome.com/cddd7554c0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -15,32 +28,27 @@
         <div class="form-container">
             <div class="singin-singup">
 
-                <form action="./pages/matricula.html" class="sign-in-form">
+                <form action="#" class="sign-in-form" id="form" name="form">
                     <h2 class="title">
                         Login - Aluno
                     </h2>
 
                     <div class="input-field">
-
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="User">
+                        <input type="text" placeholder="Usuário" id="login" name="login" required>
                     </div>
 
                     <div class="input-field">
-
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Senha">
+                        <input type="password" placeholder="Senha" id="password" name="password" required>
                     </div>
                     <a class="form-a" href="#">Esqueceu sua senha?</a>
                     <input type="submit" value="Login" class="btn solid">
-
-
-
                 </form>
 
                 <!-- //////////////////////////////////////////////////////////////////////////-->
 
-                <form action="./pages/matricula.html" class="sign-up-form">
+                <form action="#" class="sign-up-form">
                     <h2 class="title">
                         Login - Professor
                     </h2>
@@ -58,18 +66,14 @@
                     </div>
                     <a class="form-a" href="#">Esqueceu sua senha?</a>
                     <input type="submit" value="Login" class="btn solid">
-
-
                 </form>
-
             </div>
         </div>
 
         <div class="panels-container">
             <div class="panel left-panel">
-
                 <div class="content">
-                    <h3>É um professor??</h3>
+                    <h3>É um professor?</h3>
                     <p>Está do lado errado desse form, só clicar no botão que será levado ao local correto
                     </p>
 
@@ -78,13 +82,11 @@
                     </button>
                 </div>
 
-                <img class="image" src="./Assets/image/bg3.svg" width="300" alt="Get in the rocket">
-
+                <img class="image" src="./assets/image/bg3.svg" width="300" alt="Get in the rocket">
             </div>
 
 
             <div class="panel right-panel">
-
                 <div class="content">
                     <h3>É um aluno??</h3>
                     <p>Está do lado errado desse form, só clicar no botão que será levado ao local correto
@@ -95,13 +97,13 @@
                     </button>
                 </div>
 
-                <img class="image" src="./Assets/image/register.svg" alt="Get in the rocket">
+                <img class="image" src="./assets/image/register.svg" alt="Get in the rocket">
 
             </div>
         </div>
     </div>
 
-    <script src="./Assets/js/index.js"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
