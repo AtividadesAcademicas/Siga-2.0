@@ -16,17 +16,7 @@ showMenu('nav-toggle', 'nav-menu')
 
 /*=============== DARK THEME ===============*/
 const themeButton = document.getElementById('change-theme')
-const darkTheme = 'dark-theme'
-const changeIcon = 'bi-toggle-on'
 const switchButton = document.getElementById('checkbox');
-
-//Obtemos o tema atual que a interface tem validando a classe 'dark-theme'
-const getCurrentTheme = () =>
-    document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-
-const getCurrentIcon = () =>
-    themeButton.classList.contains(changeIcon) ? 'bi-toggle-off' : 'bi-toggle-on'
-
 //Ativar / Desativar o tema com o botão
 themeButton.addEventListener('click', () => {
     //Adiciona ou remove a classe 'dark-theme' ao body
@@ -39,4 +29,21 @@ themeButton.addEventListener('click', () => {
         checkbox.setAttribute('aria-checked', 'true');
 
     checkbox.classList.toggle('on');
+})
+
+/*=============== CONTRAST ===============*/
+const buttonContrast = document.getElementById('change-contrast');
+const switchButtonContrast = document.getElementById('contrast');
+//Ativar / Desativar o tema com o botão
+buttonContrast.addEventListener('click', () => {
+    //Adiciona ou remove a classe 'dark-theme' ao body
+    document.body.classList.toggle('body-contrast')
+
+    //Switch
+    if (contrast.classList.contains('on'))
+        contrast.setAttribute('aria-checked', 'false');
+    else
+        contrast.setAttribute('aria-checked', 'true');
+
+    contrast.classList.toggle('on');
 })
