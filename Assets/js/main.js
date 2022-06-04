@@ -16,39 +16,65 @@ showMenu('nav-toggle', 'nav-menu')
 
 /*=============== DARK THEME ===============*/
 const themeButton = document.getElementById('change-theme')
-const switchButton = document.getElementById('checkbox');
+const switchButton = document.getElementById('checkbox')
+const darkTheme = 'dark-theme'
+const iconTheme = 'on'
+
+//Pega o tema selecionado
+const selectedTheme = localStorage.getItem('current-theme-siga')
+const selectedIconTheme = localStorage.getItem('current-theme-icon-siga')
+
+//Se obtem a informação do tema atual (Dark ou Light)
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIconTheme = () => switchButton.classList.contains(iconTheme) ? 'on' : 'off'
+
+if (selectedTheme) {
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+    switchButton.classList[selectedIconTheme === 'on' ? 'add' : 'remove'](iconTheme)
+}
+
 //Ativar / Desativar o tema com o botão
 themeButton.addEventListener('click', () => {
     //Adiciona ou remove a classe 'dark-theme' ao body
-    document.body.classList.toggle('dark-theme')
+    document.body.classList.toggle(darkTheme)
+    switchButton.classList.toggle(iconTheme)
 
-    //Switch
-    if (checkbox.classList.contains('on'))
-        checkbox.setAttribute('aria-checked', 'false');
-    else
-        checkbox.setAttribute('aria-checked', 'true');
-
-    checkbox.classList.toggle('on');
+    localStorage.setItem('current-theme-siga', getCurrentTheme())
+    localStorage.setItem('current-theme-icon-siga', getCurrentIconTheme())
 })
 
+
 /*=============== CONTRAST ===============*/
-const buttonContrast = document.getElementById('change-contrast');
-const switchButtonContrast = document.getElementById('contrast');
+const buttonContrast = document.getElementById('change-contrast')
+const switchButtonContrast = document.getElementById('contrast')
+const contrastTheme = 'body-contrast'
+const iconContrast = 'on'
+
+//Pega o tema selecionado
+const selectedContrast = localStorage.getItem('current-contrast-siga')
+const selectedIconContrast = localStorage.getItem('current-contrast-icon-siga')
+
+//Se obtem a informação do tema atual (Dark ou Light)
+const getCurrentContrast = () => document.body.classList.contains(contrastTheme) ? 'with-contrast' : 'without-contrast'
+const getCurrentIconContrast = () => switchButtonContrast.classList.contains(iconContrast) ? 'on' : 'off'
+
+if (selectedContrast) {
+    document.body.classList[selectedContrast === 'with-contrast' ? 'add' : 'remove'](contrastTheme)
+    switchButtonContrast.classList[selectedIconContrast === 'on' ? 'add' : 'remove'](iconContrast)
+}
+
 //Ativar / Desativar o tema com o botão
 buttonContrast.addEventListener('click', () => {
     //Adiciona ou remove a classe 'dark-theme' ao body
-    document.body.classList.toggle('body-contrast')
+    document.body.classList.toggle(contrastTheme)
+    contrast.classList.toggle(iconContrast)
 
-    //Switch
-    if (contrast.classList.contains('on'))
-        contrast.setAttribute('aria-checked', 'false');
-    else
-        contrast.setAttribute('aria-checked', 'true');
-
-    contrast.classList.toggle('on');
+    localStorage.setItem('current-contrast-siga', getCurrentContrast())
+    localStorage.setItem('current-contrast-icon-siga', getCurrentIconContrast())
 })
 
-/*=============== INCREASE FONT ===============*/
+
+/*=============== INCREASE/DECREASE FONT ===============*/
 $(document).ready(function () {
     let font = 16
 
@@ -66,6 +92,3 @@ $(document).ready(function () {
         }
     })
 })
-
-
-/*=============== DECREASE FONT ===============*/
