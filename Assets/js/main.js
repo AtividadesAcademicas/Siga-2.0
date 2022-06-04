@@ -47,3 +47,25 @@ buttonContrast.addEventListener('click', () => {
 
     contrast.classList.toggle('on');
 })
+
+/*=============== INCREASE FONT ===============*/
+$(document).ready(function () {
+    let font = 16
+
+    $('#increase').click(function () {
+        if (font < 22) {
+            font++
+            $('body').css({ 'font-size': font + 'px' })
+        }
+    })
+
+    $('#decrease').click(function () {
+        if (font > 16) {
+            font--
+            $('body').css({ 'font-size': font + 'px' })
+        }
+    })
+})
+
+
+/*=============== DECREASE FONT ===============*/

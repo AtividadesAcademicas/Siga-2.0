@@ -44,6 +44,7 @@
 .info-test,
 .info-course {
     line-height: 30px;
+    width: max-content;
 }
 
 /*===== MEDIA QUERIES =====*/

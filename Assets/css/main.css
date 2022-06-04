@@ -77,9 +77,9 @@ body.dark-theme #change-contrast {
 
 /*===== CONTRAST THEME =====*/
 body.body-contrast {
-    --brand: hsl(0, 0%, 7.5%);
-    --brand-medium: hsl(0, 0%, 5%);
-    --brand-dark: hsl(0, 0%, 2.5%);
+    --brand: hsl(0, 0%, 2.5%);
+    --brand-medium: hsl(0, 0%, 3.5%);
+    --brand-dark: hsl(0, 0%, 1.5%);
     --brand-light: hsl(0, 0%, 10%);
     background-color: #000;
     color: var(--white);
