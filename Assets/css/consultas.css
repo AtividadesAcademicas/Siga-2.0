@@ -148,7 +148,7 @@ main {
     outline: none;
     background-color: var(--red);
     color: #fff;
-
+    font-weight: bold;
     border-radius: 0.5rem;
     cursor: pointer;
 }

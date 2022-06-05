@@ -11,14 +11,29 @@ while (i <= 6) {
     let progress = setInterval(() => {
         progressValue++
 
-        valueContainer.textContent = `${progressValue}%`
-        progressBar.style.background = `conic-gradient(
-            var(--red) ${progressValue * 3.6}deg,
-            var(--brand) ${progressValue * 3.6}deg
-        )`
+        const selectedContrast = localStorage.getItem('current-contrast-siga')
 
-        if (progressEndValue < 75) {
-            valueContainer.style.color = `var(--red)`
+        if (selectedContrast === 'with-contrast') {
+            valueContainer.textContent = `${progressValue}%`
+            progressBar.style.background = `conic-gradient(
+                #ff0 ${progressValue * 3.6}deg,
+                var(--brand) ${progressValue * 3.6}deg
+            )`
+
+            if (progressEndValue < 75) {
+                valueContainer.style.color = `#ff0`
+            }
+
+        } else {
+            valueContainer.textContent = `${progressValue}%`
+            progressBar.style.background = `conic-gradient(
+                var(--red) ${progressValue * 3.6}deg,
+                var(--brand) ${progressValue * 3.6}deg
+            )`
+
+            if (progressEndValue < 75) {
+                valueContainer.style.color = `var(--red)`
+            }
         }
 
         if (progressValue == progressEndValue) {

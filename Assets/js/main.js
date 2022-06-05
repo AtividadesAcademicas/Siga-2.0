@@ -71,24 +71,34 @@ buttonContrast.addEventListener('click', () => {
 
     localStorage.setItem('current-contrast-siga', getCurrentContrast())
     localStorage.setItem('current-contrast-icon-siga', getCurrentIconContrast())
+
+    location.reload()
 })
 
 
 /*=============== INCREASE/DECREASE FONT ===============*/
 $(document).ready(function () {
-    let font = 16
+    localStorage.getItem('current-font-size-siga')
+
+    const body = document.body
+    let bodyStyle = window.getComputedStyle(body, null)
+    let getFontSizeBody = parseInt(bodyStyle.getPropertyValue('font-size'))
 
     $('#increase').click(function () {
-        if (font < 22) {
-            font++
-            $('body').css({ 'font-size': font + 'px' })
+        if (getFontSizeBody < 22) {
+            getFontSizeBody++
+            $('body').css({ 'font-size': getFontSizeBody + 'px' })
         }
+
+        localStorage.setItem('current-font-size-siga', getFontSizeBody)
     })
 
     $('#decrease').click(function () {
-        if (font > 16) {
-            font--
-            $('body').css({ 'font-size': font + 'px' })
+        if (getFontSizeBody > 16) {
+            getFontSizeBody--
+            $('body').css({ 'font-size': getFontSizeBody + 'px' })
         }
+
+        localStorage.setItem('current-font-size-siga', getFontSizeBody)
     })
 })
