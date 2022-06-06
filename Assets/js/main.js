@@ -78,27 +78,33 @@ buttonContrast.addEventListener('click', () => {
 
 /*=============== INCREASE/DECREASE FONT ===============*/
 $(document).ready(function () {
-    localStorage.getItem('current-font-size-siga')
+    let currentFontSize = parseInt(localStorage.getItem('current-font-size-siga'))
 
-    const body = document.body
-    let bodyStyle = window.getComputedStyle(body, null)
-    let getFontSizeBody = parseInt(bodyStyle.getPropertyValue('font-size'))
+    let font
+
+    if (currentFontSize) {
+        $('body').css({ 'font-size': currentFontSize + 'px' })
+
+        font = currentFontSize
+    } else {
+        font = 16
+    }
 
     $('#increase').click(function () {
-        if (getFontSizeBody < 22) {
-            getFontSizeBody++
-            $('body').css({ 'font-size': getFontSizeBody + 'px' })
+        if (font < 22) {
+            font++
+            $('body').css({ 'font-size': font + 'px' })
         }
 
-        localStorage.setItem('current-font-size-siga', getFontSizeBody)
+        localStorage.setItem('current-font-size-siga', font)
     })
 
     $('#decrease').click(function () {
-        if (getFontSizeBody > 16) {
-            getFontSizeBody--
-            $('body').css({ 'font-size': getFontSizeBody + 'px' })
+        if (font > 16) {
+            font--
+            $('body').css({ 'font-size': font + 'px' })
         }
 
-        localStorage.setItem('current-font-size-siga', getFontSizeBody)
+        localStorage.setItem('current-font-size-siga', font)
     })
 })
