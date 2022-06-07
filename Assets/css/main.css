@@ -33,15 +33,6 @@ a {
     color: var(--black);
 }
 
-/*===== NAVIGATION =====*/
-header {
-    width: 20rem;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
 /*===== DARK THEME =====*/
 body.dark-theme {
     --brand: hsl(249, 16%, 15%);
@@ -49,6 +40,10 @@ body.dark-theme {
     --brand-dark: hsl(249, 16%, 12%);
     --brand-light: hsl(249, 15%, 18%);
     color: var(--white);
+}
+
+body.dark-theme .nav-logo {
+    content: url(../image/Logotipo-dark.png);
 }
 
 body.dark-theme a {
@@ -88,6 +83,10 @@ body.body-contrast {
 body.body-contrast a {
     color: #c7c700;
     text-decoration: underline;
+}
+
+body.body-contrast .nav-logo {
+    content: url(../image/Logotipo-contrast.png);
 }
 
 body.body-contrast #change-contrast:hover .contrast {
@@ -130,7 +129,16 @@ body.body-contrast .modal-button a {
     color: var(--white);
 }
 
-/*===== ACCESSIBILITY =====*/
+/*===== NAVIGATION =====*/
+header {
+    width: 20rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Accessibility */
 .accessibility {
     background-color: var(--brand-dark);
     height: 100%;
@@ -138,6 +146,7 @@ body.body-contrast .modal-button a {
     align-items: center;
     padding: 0 0.25rem;
     place-items: center;
+    z-index: 10;
 }
 
 .accessibility-link {
@@ -234,6 +243,7 @@ body.body-contrast .modal-button a {
 
 .nav-logo {
     width: 175px;
+    content: url(../../Assets/image/Logotipo.png);
 }
 
 .nav-list {
