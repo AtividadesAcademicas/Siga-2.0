@@ -370,6 +370,11 @@ header {
         gap: 0;
     }
 
+    main {
+        position: relative;
+        margin: 15rem 0 0;
+    }
+
     .nav {
         display: flex;
         justify-content: space-between;
@@ -440,11 +445,6 @@ header {
     .menu-burger {
         font-size: 1.5rem;
     }
-}
-
-main {
-    position: relative;
-    margin: 15rem 0 0;
 }
 
 .content-title {
