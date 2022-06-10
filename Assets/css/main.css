@@ -362,30 +362,31 @@ header {
 
     header {
         width: 100vw;
-        height: 16rem;
+        height: 13rem;
         display: grid;
         top: 0;
         z-index: 5;
+        position: fixed;
+        gap: 0;
     }
 
     .nav {
         display: flex;
         justify-content: space-between;
         padding: 0 2.5%;
-        position: fixed;
         width: 95%;
         height: 10rem;
         background-color: var(--brand);
+        position: relative;
     }
 
     .accessibility {
         display: flex;
-        top: 0;
-        position: fixed;
         width: 100vw;
         justify-content: space-around;
         height: 3rem;
         z-index: 5;
+        position: relative;
     }
 
     .nav-logo {
@@ -443,6 +444,7 @@ header {
 
 main {
     position: relative;
+    margin: 15rem 0 0;
 }
 
 .content-title {
